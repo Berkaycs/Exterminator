@@ -47,6 +47,12 @@ GameObject:
   - component: {fileID: 7221467102958662844}
   - component: {fileID: 6936634597337001869}
   - component: {fileID: 1081145243522541106}
+  - component: {fileID: 4316671337765255468}
+  - component: {fileID: 757433328}
+  - component: {fileID: 7456782791842899718}
+  - component: {fileID: 8259082256477527983}
+  - component: {fileID: 6284730451287054893}
+  - component: {fileID: 1877294931488328197}
   m_Layer: 0
   m_Name: Chomper
   m_TagString: Untagged
@@ -136,6 +142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthComponent: {fileID: 6936634597337001869}
   _animancer: {fileID: 7221467102958662844}
+  _perceptionComponent: {fileID: 8259082256477527983}
+  _behaviorTree: {fileID: 0}
   _death:
     _FadeDuration: 0.25
     _Events:
@@ -151,7 +159,7 @@ MonoBehaviour:
       _NormalizedTimes: []
       _Callbacks: []
       _Names: []
-    _Clip: {fileID: 0}
+    _Clip: {fileID: 7400000, guid: ab5bda48f8799bb4f84ab060e69f60a7, type: 3}
     _Speed: 1
     _NormalizedStartTime: NaN
 --- !u!114 &7221467102958662844
@@ -198,6 +206,98 @@ MonoBehaviour:
     type: 3}
   _healthBarAttachPoint: {fileID: 7126897733380883675}
   _healthComponent: {fileID: 6936634597337001869}
+--- !u!114 &4316671337765255468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733601988646516728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42a7570e5dce6242b0cebebd548af78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _forgettingTime: 0
+  PerceivableStimulis: []
+  _healthComponent: {fileID: 6936634597337001869}
+  _hitMemory: 4
+--- !u!114 &757433328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733601988646516728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad636d2ea88a414db2f82c09686dc6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _forgettingTime: 3
+  PerceivableStimulis: []
+  _senseDistance: 2
+--- !u!114 &7456782791842899718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733601988646516728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1420f7cd1b258a445a54533cc5767d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _forgettingTime: 3
+  PerceivableStimulis: []
+  _sightDistance: 5
+  _sightHalfAngle: 45
+  _eyeHeight: 1
+--- !u!114 &8259082256477527983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733601988646516728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd785b36c16d584a8e19a3d78c86954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _senses:
+  - {fileID: 7456782791842899718}
+  - {fileID: 757433328}
+  - {fileID: 4316671337765255468}
+--- !u!114 &6284730451287054893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733601988646516728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f399e40ec4b103c45ac407a9b36691d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1877294931488328197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733601988646516728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f769bc1af82a64d92b3f89b084563c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &2448534036564880768
 PrefabInstance:
   m_ObjectHideFlags: 0

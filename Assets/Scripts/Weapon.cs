@@ -41,7 +41,7 @@ public abstract class Weapon : MonoBehaviour
 
         if (healthComponent != null )
         {
-            healthComponent.ChangeHealth(-amount);
+            healthComponent.ChangeHealth(-amount, Owner);
         }
     }
 }

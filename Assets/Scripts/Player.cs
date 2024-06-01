@@ -123,6 +123,8 @@ public class Player : MonoBehaviour
         _characterController.Move(moveDir * Time.deltaTime * _moveSpeed);
 
         UpdateAim(moveDir);
+
+        _characterController.Move(Vector3.down * Time.deltaTime * 10f);
     }
 
     private void UpdateAim(Vector3 currentMoveDir)
